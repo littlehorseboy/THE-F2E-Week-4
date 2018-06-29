@@ -6,57 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Product Gallery</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i,900">
     <link rel="stylesheet" href="src/lib/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="src/css/index.css">
-    <style>
-        .grid-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(8, [col] 1fr);
-            grid-template-rows: repeat(19, [row] 100px);
-            /* grid-auto-rows: minmax(100px, 1fr); */
-        }
-
-        .grid-container > div {
-            border: 1px solid red;
-        }
-
-        .item-1 {
-            grid-column: col 1 / span 4;
-            grid-row: row 3 / span 4;
-        }
-
-        .item-2 {
-            grid-column: col 6 / span 2;
-            grid-row: row 4 / span 2;
-        }
-
-        .item-3 {
-            grid-column: col 1 / span 4;
-            grid-row: row 8 / span 2;
-        }
-
-        .item-4 {
-            grid-column: col 7 / span 2;
-            grid-row: row 8 / span 4;
-        }
-
-        .item-5 {
-            grid-column: col 3 / span 2;
-            grid-row: row 12 / span 2;
-        }
-
-        .item-6 {
-            grid-column: col 5 / span 4;
-            grid-row: row 14 / span 4;
-        }
-
-        .item-7 {
-            grid-column: col 1 / span 2;
-            grid-row: row 16 / span 4;
-        }
-    </style>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
@@ -65,13 +17,56 @@
 <body>
     <div id="app">
         <div class="grid-container">
-            <div class="item-1">b</div>
-            <div class="item-2">a</div>
-            <div class="item-3">a</div>
-            <div class="item-4">a</div>
-            <div class="item-5">a</div>
-            <div class="item-6">a</div>
-            <div class="item-7">a</div>
+            <div class="title">
+                <div>
+                    <span>CCCLOTHES</span>
+                </div>
+                <div>
+                    <h1>MEN'S TOPS</h1>
+                </div>
+            </div>
+            <div class="item-1">
+                <div class="image-Container">
+                    <img src="https://source.unsplash.com/seTr2ZmQDcM/600x700">
+                </div>
+            </div>
+            <div class="item-1-title">LINEN BLAZER</div>
+            <div class="item-1-subtitle">
+                <span>Men’s outfit</span>
+            </div>
+            <div class="item-1-text-number">01</div>
+            <div class="item-1-stroke-box"></div>
+            <div class="item-1-fill-box"></div>
+            <div class="item-2">
+                <div class="image-Container">
+                    <img src="https://source.unsplash.com/us2M25dyCUo/600x800">
+                </div>
+            </div>
+            <div class="item-3">
+                <div class="image-Container">
+                    <img src="https://source.unsplash.com/us2M25dyCUo/600x800">
+                </div>
+            </div>
+            <div class="item-4">
+                <div class="image-Container">
+                    <img src="https://source.unsplash.com/us2M25dyCUo/600x800">
+                </div>
+            </div>
+            <div class="item-5">
+                <div class="image-Container">
+                    <img src="https://source.unsplash.com/us2M25dyCUo/600x800">
+                </div>
+            </div>
+            <div class="item-6">
+                <div class="image-Container">
+                    <img src="https://source.unsplash.com/us2M25dyCUo/600x800">
+                </div>
+            </div>
+            <div class="item-7">
+                <div class="image-Container">
+                    <img src="https://source.unsplash.com/us2M25dyCUo/600x800">
+                </div>
+            </div>
         </div>
     </div>
 
