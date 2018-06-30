@@ -5,6 +5,7 @@ body {
 }
 
 .grid-container {
+  min-width: 460px;
   max-width: 960px;
   height: 2000px;
   margin: 0 auto;
@@ -73,6 +74,7 @@ body {
   font-weight: 700;
   text-align: center;
   text-shadow: 0px -15px 0px rgba(0, 0, 0, 0.3), 0px -23px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .item-1-subtitle {
@@ -81,6 +83,12 @@ body {
   font-size: 24px;
   font-weight: 700;
   font-style: italic;
+}
+
+@media (max-width: 500px) {
+  .item-1-subtitle {
+    grid-row: row 5 / span 1;
+  }
 }
 
 .item-1-subtitle>span {
