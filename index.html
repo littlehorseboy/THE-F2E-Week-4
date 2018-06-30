@@ -16,6 +16,15 @@
 
 <body>
     <div id="app">
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/x-template" id="Home">
         <div class="grid-container">
             <div class="title">
                 <div>
@@ -27,11 +36,15 @@
             </div>
 
             <div class="item-1">
-                <div class="image-Container">
+                <router-link to="/product/01" tag="div" class="image-Container cursor-pointer">
                     <img src="https://source.unsplash.com/seTr2ZmQDcM/600x700">
-                </div>
+                </router-link>
             </div>
-            <div class="item-1-title">LINEN BLAZER</div>
+            <div class="item-1-title">
+                <router-link to="/product/01" tag="span" class="cursor-pointer">
+                    LINEN BLAZER
+                </router-link>
+            </div>
             <div class="item-1-subtitle">
                 <span>Men’s outfit</span>
             </div>
@@ -40,35 +53,49 @@
             <div class="item-1-fill-box"></div>
 
             <div class="item-2">
-                <div class="image-Container">
+                <router-link to="/product/02" tag="div" class="image-Container cursor-pointer">
                     <img src="https://source.unsplash.com/us2M25dyCUo/500x800">
-                </div>
+                </router-link>
             </div>
-            <div class="item-2-title">FREELIFT</div>
-            <div class="item-2-subtitle">Men’s basics</div>
+            <div class="item-2-title">
+                <router-link to="/product/02" tag="span" class="cursor-pointer">
+                    FREELIFT
+                </router-link>
+            </div>
+            <div class="item-2-subtitle">
+                <span>Men’s basics</span>
+            </div>
             <div class="item-2-text-number">02</div>
             <div class="item-2-stroke-box"></div>
             <div class="item-2-fill-box"></div>
-            
+
 
             <div class="item-3">
-                <div class="image-Container">
+                <router-link to="/product/03" tag="div" class="image-Container cursor-pointer">
                     <img src="https://source.unsplash.com/wKOKidNT14w/650x400">
-                </div>
+                </router-link>
             </div>
-            <div class="item-3-title">SUPER SKINNY</div>
-            <div class="item-3-subtitle">Men’s pattern shirts</div>
+            <div class="item-3-title">
+                <router-link to="/product/03" tag="span" class="cursor-pointer">
+                    SUPER SKINNY
+                </router-link>
+            </div>
+            <div class="item-3-subtitle">
+                <span>Men’s pattern shirts</span>
+            </div>
             <div class="item-3-text-number">03</div>
             <div class="item-3-stroke-box"></div>
             <div class="item-3-fill-box"></div>
 
             <div class="item-4">
-                <div class="image-Container">
+                <router-link to="/product/04" tag="div" class="image-Container cursor-pointer">
                     <img src="https://source.unsplash.com/muWowSks60w/400x800">
-                </div>
+                </router-link>
             </div>
             <div class="item-4-title">
-                <span>DENIM</span>
+                <router-link to="/product/04" tag="span" class="cursor-pointer">
+                    DENIM
+                </router-link>
             </div>
             <div class="item-4-subtitle">
                 <span>Men’s cadual</span>
@@ -78,48 +105,89 @@
             <div class="item-4-fill-box"></div>
 
             <div class="item-5">
-                <div class="image-Container">
+                <router-link to="/product/05" tag="div" class="image-Container cursor-pointer">
                     <img src="https://source.unsplash.com/pNiOqjbMKIc/500x300">
-                </div>
+                </router-link>
             </div>
-            <div class="item-5-title">SWEATSHIRTS</div>
-            <div class="item-5-subtitle">Men’s jacket</div>
+            <div class="item-5-title">
+                <router-link to="/product/05" tag="span" class="cursor-pointer">
+                    SWEATSHIRTS
+                </router-link>
+            </div>
+            <div class="item-5-subtitle">
+                <span>Men’s jacket</span>
+            </div>
             <div class="item-5-text-number">05</div>
             <div class="item-5-stroke-box"></div>
             <div class="item-5-fill-box"></div>
 
             <div class="item-6">
-                <div class="image-Container">
+                <router-link to="/product/06" tag="div" class="image-Container cursor-pointer">
                     <img src="https://source.unsplash.com/ZPykEqAQv0M/400x600">
-                </div>
+                </router-link>
             </div>
-            <div class="item-6-title">VINTAGE DENIM</div>
-            <div class="item-6-subtitle">Men’s classic</div>
+            <div class="item-6-title">
+                <router-link to="/product/06" tag="span" class="cursor-pointer">
+                    VINTAGE DENIM
+                </router-link>
+            </div>
+            <div class="item-6-subtitle">
+                <span>Men’s classic</span>
+            </div>
             <div class="item-6-text-number">06</div>
             <div class="item-6-stroke-box"></div>
             <div class="item-6-fill-box"></div>
 
             <div class="item-7">
-                <div class="image-Container">
+                <router-link to="/product/07" tag="div" class="image-Container cursor-pointer">
                     <img src="https://source.unsplash.com/mXu1SpzHq6w/600x800">
-                </div>
+                </router-link>
             </div>
             <div class="item-7-title">
-                <span>EDITION</span>
+                <router-link to="/product/07" tag="span" class="cursor-pointer">
+                    EDITION
+                </router-link>
             </div>
-            <div class="item-7-subtitle">Men’s shirts</div>
+            <div class="item-7-subtitle">
+                <span>Men’s shirts</span>
+            </div>
             <div class="item-7-text-number">07</div>
             <div class="item-7-stroke-box"></div>
             <div class="item-7-fill-box"></div>
         </div>
-    </div>
+    </script>
+    <script type="text/template" id="Product">
+        <div class="product-grid-container">
+            <div class="home-btn-div">
+                <div>
+                    <i class="fas fa-arrow-left"></i>
+                    <span>CCCLOTHES</span>
+                </div>
+            </div>
+            <div class="product-top-img">
+                <div class="image-Container">
+                    <img src="https://source.unsplash.com/seTr2ZmQDcM/600x700">
+                </div>
+            </div>
+            <div class="product-top-title">
+                {{ product.productName.split(' ')[0] }}
+            </div>
+            <div class="product-top-title2">
+                <span>{{ product.productName.split(' ')[1] }}</span>
+            </div>
+            <div class="product-top-text-number">
+                <span>{{ product.id }}</span>
+            </div>
+            <div class="product-top-text-top">
+                <span>TOP</span>
+            </div>
+            <div class="product-top-stroke-box"></div>
+            <div class="product-top-fill-box"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="src/store/store.js"></script>
+            
+        </div>
+    </script>
+    <script type="text/babel" src="src/store/store.js"></script>
     <script type="text/babel" src="src/js/index.js"></script>
 </body>
 

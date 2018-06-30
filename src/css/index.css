@@ -4,6 +4,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Home */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-container {
   min-width: 460px;
   max-width: 960px;
@@ -456,3 +462,119 @@ body {
   background-color: #50E3C2;
   z-index: -1;
 }
+
+/* end Home */
+
+/* Product */
+
+.product-grid-container {
+  min-width: 460px;
+  max-width: 960px;
+  height: 2000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, [col] 1fr);
+  grid-template-rows: repeat(20, [row] 1fr);
+}
+
+.product-grid-container>div {
+  border: 1px solid red;
+}
+
+.product-grid-container>div>.image-Container {
+  width: 100%;
+  height: 100%;
+}
+
+.product-grid-container>div>.image-Container>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-btn-div {
+  grid-column: col 1 / span 3;
+  grid-row: row 1 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-btn-div>div {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.home-btn-div>div>span {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.product-top-img {
+  grid-column: col 2 / span 6;
+  grid-row: row 3 / span 4;
+}
+
+.product-top-title {
+  grid-column: col 6 / span 2;
+  grid-row: row 2 / span 1;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.product-top-title2 {
+  grid-column: col 7 / span 2;
+  grid-row: row 3 / span 1;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-top-title2>span {
+  transform: rotate(90deg) translate(0, -100%);
+  transform-origin: 30% 70%;
+}
+
+.product-top-text-number {
+  grid-column: col 1 / span 1;
+  grid-row: row 6 / span 1;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.product-top-text-top {
+  grid-column: col 2 / span 1;
+  grid-row: row 7 / span 1;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.product-top-fill-box {
+  grid-column: col 1 / span 2;
+  grid-row: row 2 / span 2;
+  background-color: #50E3C2;
+  transform: translate(25%, 25%);
+  z-index: -1;
+}
+
+.product-top-stroke-box {
+  grid-column: col 4 / span 4;
+  grid-row: row 5 / span 2;
+  border: 20px solid #50E3C2;
+  transform: translate(calc(25%/2), 25%);
+  z-index: -1;
+}
+
+/* end Product */
