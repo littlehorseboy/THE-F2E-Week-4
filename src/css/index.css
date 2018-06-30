@@ -14,9 +14,9 @@ body {
   /* grid-auto-rows: minmax(100px, 1fr); */
 }
 
-.grid-container>div {
+/* .grid-container>div {
   border: 1px solid red;
-}
+} */
 
 .grid-container>div>.image-Container {
   width: 100%;
@@ -128,6 +128,7 @@ body {
   text-shadow: 0px -15px 0px rgba(0, 0, 0, 0.3), 0px -23px 1px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
 }
 
 .item-2-subtitle {
@@ -227,8 +228,14 @@ body {
   font-size: 48px;
   line-height: 48px;
   font-weight: 700;
-  text-align: center;
+  text-align: right;
   text-shadow: 0px -15px 0px rgba(0, 0, 0, 0.3), 0px -23px 1px rgba(0, 0, 0, 0.1);
+}
+
+.item-4-title>span {
+  display: inline-block;
+  transform: rotate(270deg);
+  transform-origin: 85%;
 }
 
 .item-4-subtitle {
@@ -237,6 +244,15 @@ body {
   font-size: 24px;
   font-weight: 700;
   font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.item-4-subtitle>span {
+  display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: 65% 15%;
 }
 
 .item-4-text-number {
@@ -389,6 +405,12 @@ body {
   line-height: 48px;
   font-weight: 700;
   text-shadow: 0px -15px 0px rgba(0, 0, 0, 0.3), 0px -23px 1px rgba(0, 0, 0, 0.1);
+}
+
+.item-7-title>span {
+  display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: 13%;
 }
 
 .item-7-subtitle {
