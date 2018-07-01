@@ -20,6 +20,10 @@ const Product = {
       return this.$store.getters.getProductById(this.$route.params.id);
     },
   },
+  mounted() {
+    window.sr = ScrollReveal();
+    sr.reveal('.image-Container');
+  },
 };
 
 const routes = [
@@ -37,6 +41,9 @@ const routes = [
 
 const router = new VueRouter({
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  },
 });
 
 const app = new Vue({

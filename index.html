@@ -41,7 +41,7 @@
                 </router-link>
             </div>
             <div class="item-1-title">
-                <router-link to="/product/01" tag="span" class="cursor-pointer">
+                <router-link to="/product/01" tag="span" class="cursor-pointer effect-shine">
                     LINEN BLAZER
                 </router-link>
             </div>
@@ -58,7 +58,7 @@
                 </router-link>
             </div>
             <div class="item-2-title">
-                <router-link to="/product/02" tag="span" class="cursor-pointer">
+                <router-link to="/product/02" tag="span" class="cursor-pointer effect-shine">
                     FREELIFT
                 </router-link>
             </div>
@@ -76,7 +76,7 @@
                 </router-link>
             </div>
             <div class="item-3-title">
-                <router-link to="/product/03" tag="span" class="cursor-pointer">
+                <router-link to="/product/03" tag="span" class="cursor-pointer effect-shine">
                     SUPER SKINNY
                 </router-link>
             </div>
@@ -93,7 +93,7 @@
                 </router-link>
             </div>
             <div class="item-4-title">
-                <router-link to="/product/04" tag="span" class="cursor-pointer">
+                <router-link to="/product/04" tag="span" class="cursor-pointer effect-shine">
                     DENIM
                 </router-link>
             </div>
@@ -110,7 +110,7 @@
                 </router-link>
             </div>
             <div class="item-5-title">
-                <router-link to="/product/05" tag="span" class="cursor-pointer">
+                <router-link to="/product/05" tag="span" class="cursor-pointer effect-shine">
                     SWEATSHIRTS
                 </router-link>
             </div>
@@ -127,7 +127,7 @@
                 </router-link>
             </div>
             <div class="item-6-title">
-                <router-link to="/product/06" tag="span" class="cursor-pointer">
+                <router-link to="/product/06" tag="span" class="cursor-pointer effect-shine">
                     VINTAGE DENIM
                 </router-link>
             </div>
@@ -144,7 +144,7 @@
                 </router-link>
             </div>
             <div class="item-7-title">
-                <router-link to="/product/07" tag="span" class="cursor-pointer">
+                <router-link to="/product/07" tag="span" class="cursor-pointer effect-shine">
                     EDITION
                 </router-link>
             </div>
@@ -159,14 +159,14 @@
     <script type="text/template" id="Product">
         <div class="product-grid-container">
             <div class="home-btn-div">
-                <div>
+                <router-link to="/" tag="div">
                     <i class="fas fa-arrow-left"></i>
                     <span>CCCLOTHES</span>
-                </div>
+                </router-link>
             </div>
             <div class="product-top-img">
                 <div class="image-Container">
-                    <img src="https://source.unsplash.com/seTr2ZmQDcM/600x700">
+                    <img :src="product.topImgSrc">
                 </div>
             </div>
             <div class="product-top-title">
@@ -184,7 +184,32 @@
             <div class="product-top-stroke-box"></div>
             <div class="product-top-fill-box"></div>
 
-            
+
+            <div class="product-center-center">
+                <span>PRODUCT DETAILS</span>
+            </div>
+            <div class="product-center-title">
+                <div>{{ product.productName }}</div>
+                <div>{{ product.subtitle }}</div>
+            </div>
+            <div class="product-center-detail">
+                {{ product.discription }}
+            </div>
+
+
+            <div class="product-bottom-img">
+                <div class="image-Container">
+                    <img :src="product.bottomImgSrc">
+                </div>
+            </div>
+            <div class="product-bottom-img2">
+                <div class="image-Container">
+                    <img :src="product.bottomImgSrc2">
+                </div>
+            </div>
+            <div class="product-bottom-fill-box"></div>
+            <div class="product-bottom-stripe-box"></div>
+            <div class="product-bottom-stroke-box"></div>
         </div>
     </script>
     <script type="text/babel" src="src/store/store.js"></script>
